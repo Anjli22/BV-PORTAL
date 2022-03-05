@@ -20,7 +20,7 @@
             <div class="toggle-btn">
                 <button id="teacher-btn" onclick="showsignup();">Teacher</button>
             </div>
-       
+               
         </div>
         <div></div>
             
