@@ -48,14 +48,14 @@
                     <div>
                     <div style="text-align:center; font-weight:bold; ">'Admin Panel'</div>
                         <label>EMAIL: <span style="color:red">*</span></label><br>
-                        <input type="email" id="emailT" name="emailT" placeholder="Enter your email" class="form-control" required>
+                        <input type="email" id="emailA" name="emailA" placeholder="Enter your email" class="form-control" required>
                     </div>  
                     <div>
                         <label >PASSWORD: <span style="color:red">*</span></label><br>
-                        <input type="password" id="passwordT" name="passwordT" placeholder="Enter password" class="form-control" required>           
+                        <input type="password" id="passwordA" name="passwordA" placeholder="Enter password" class="form-control" required>           
                     </div>
                     <div class="btn2">
-                    <input type="submit" id="submitT" name="submitT" onclick="getAdminData();" class="submit"   >      
+                    <input type="submit" id="submitA" name="submitA" onclick="getAdminData();" class="submit"   >      
                     </div>  
                 </form>
 
@@ -99,18 +99,17 @@
 
         $.ajax({
             type:"POST",
-            url:"../ajax/getStudentData.php",
+            url:"../ajax/getStudent.php",
             data: {emailS:emailS,passwordS:passwordS},
             success: function(data){
                 if(data==0)
-                alert('logged in');
-                    // window.location.href="./home.php";
+                
+                    window.location.href="./homeS.php";
 
                 else if (data==1)
                     alert ("incorrect  password ");
                 else
-
-                    alert (data);
+                    console.log(data);
 
                 }
             });
@@ -119,23 +118,22 @@
 
         function getAdminData()
         {
-        var emailS=document.getElementById('emailS').value;
-        var passwordS=document.getElementById('passwordS').value;
+        var emailA=document.getElementById('emailA').value;
+        var passwordA=document.getElementById('passwordA').value;
 
         $.ajax({
             type:"POST",
-            url:"../ajax/getAdminData.php",
-            data: {emailS:emailS,passwordS:passwordS},
+            url:"./../../Admin/ajax/getAdmin.php",
+            data: {emailA:emailA,passwordA:passwordA},
             success: function(data){
                 if(data==0)
-                alert('logged in');
-                    // window.location.href="./home.php";
+                    window.location.href="./../../Admin/html/homeA.php";
 
                 else if (data==1)
-                    alert ("incorrect  password ");
+                    alert ("Incorrect Password ");
                 else
 
-                    alert (data);
+                    console.log(data);
 
                 }
             });

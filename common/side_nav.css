@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Oswald:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar{
+    top: 0;
+    height: 75px;
+    box-sizing: border-box;
+    width: 100vw;
+    background-color:rgb(9 43 106);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px  24px ;
+    font-size: 1.3em;
+    font-family: serif;
+    position: fixed;
+}
+.logout-btn{
+    cursor: pointer;
+}
+
+.user-log-out{
+    opacity: 0;
+    position: fixed;
+    font-size: 1em !important;
+    box-sizing: content-box;
+    padding: 9px 20px;
+    color: black;
+    background: #f5f8d7;
+    box-shadow: 0px 0px 20px 0px #564c4c;
+    transform: translate(-70%, 85px);
+    white-space: nowrap;
+    line-height: 1.5em;
+    text-align: left !important;
+}
+.logout-btn.active .user-log-out{
+    cursor: pointer;
+    opacity: 1;
+    transform: translate(-90% , 65px) ;
+    transition: all 0.7s ease;
+}
+
+.navbar span{
+    font-size: 1.6em;
+}
+#ham-burger{
+    cursor: pointer;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar{
+    top: 75px;
+    width:72px;
+    height: calc(100vh - 75px);
+    background-color: rgb(9 43 106);
+    position: fixed;
+    line-height: 44px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: width 0.7s ease;
+    overflow-x: hidden;
+    z-index: 2;
+
+}
+.sidebar ul{
+    margin-top: 10px;
+}
+.sidebar ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 15px 0px 23px;
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.sidebar ul li i{
+    margin-right: 25px;
+}
+
+.sidebar ul li:hover{
+    border-left: 3px solid rgb(255, 255, 255);
+}
+
+.sidebar ul li a span{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+  }
+
+.sidebar.open{
+    width: 275px;
+
+}
+.sidebar.open ul li {
+    text-align: left;
+}
+
+.overlay{
+    position: fixed;
+    top: 75px;
+    left: 72px;
+    width: 100vw;
+    height: calc(100vh - 75px);
+    background-color: rgba(0, 0, 0, 0.419);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+}
+.overlay.overlay-blur{
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s backdrop-filter;
+
+}
+
+.sidebar ul li .tooltip{
+    opacity: 0;
+    position: fixed;
+    z-index: 100;
+    color: black;
+    background-color: #f5f8d7;
+    padding: 0px 30px;
+    font-size: 0.8em;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px rgb(51, 50, 50);
+    transform: translate(20px, -42px) !important;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+.sidebar ul li:hover .tooltip{
+    /* opacity: 1; */
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.7s ease;
+    transform: translate(50px, -42px) !important;
+}
+.sidebar.open li .tooltip{
+    display: none;
+}
+  
+.main{
+    margin-top: 75px;
+    margin-left: 72px;
+}
+@media screen and (max-width: 385px) {
+    .navbar{
+        font-size: 1.2em;
+        padding: 10px 20px;
+
+    }
+    
+}
+
+@media screen and (max-width: 430px) {
+    
+    .image{
+        display: none;
+    }
+    .sidebar.open{
+        width: 100vw !important;
+        position: relative;
+        
+    }
+    
+    .sidebar.open .super-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width: 950px ) {
+    
+    
+    .sidebar{
+        font-size: 1em;
+        
+    }
+    .sidebar.open{
+        width: 225px ;
+    }
+    .sidebar ul li i{
+        margin-right: 20px;
+    }
+    .sidebar ul li a{
+        padding: 0px 15px 0px 28px;
+    }
+} 
