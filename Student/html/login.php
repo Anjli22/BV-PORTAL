@@ -20,7 +20,7 @@
                 <button id="student-btn" class="active" onclick="showstudent();">Student</button>
             </div>
             <div class="toggle-btn">
-                <button id="teacher-btn" onclick="showteacher();">Teacher</button>
+                <button id="teacher-btn" onclick="showteacher();">Admin</button>
             </div>
                
         </div>
@@ -28,7 +28,7 @@
             <div class="form" id="student-form">
                 <form>  
                     <div>
-                        <div style="text-align:center; font-weight:bold; ">'Welcome Student'</div>
+                        <div style="text-align:center; font-weight:bold; ">'Student Panel'</div>
                         <label>EMAIL: <span style="color:red">*</span></label><br>
                         <input type="email" id="emailS" name="emailS" placeholder="Enter your email" class="form-control" required>
                     </div>  
@@ -37,7 +37,7 @@
                         <input type="password" id="passwordS" name="passwordS" placeholder="Enter password" class="form-control" required>           
                     </div>
                     <div class="btn2">
-                    <input type="submit" id="submitS" name="submitS" onclick="getstudent();" class="submit"   >      
+                    <input type="submit" id="submitS" name="submitS" onclick="getStudentData();" class="submit"   >      
                     </div>  
                 </form>
 
@@ -46,7 +46,7 @@
             <div class="form" id="teacher-form" style="display:none;">
                 <form>  
                     <div>
-                    <div style="text-align:center; font-weight:bold; ">'Welcome Teacher'</div>
+                    <div style="text-align:center; font-weight:bold; ">'Admin Panel'</div>
                         <label>EMAIL: <span style="color:red">*</span></label><br>
                         <input type="email" id="emailT" name="emailT" placeholder="Enter your email" class="form-control" required>
                     </div>  
@@ -55,7 +55,7 @@
                         <input type="password" id="passwordT" name="passwordT" placeholder="Enter password" class="form-control" required>           
                     </div>
                     <div class="btn2">
-                    <input type="submit" id="submitT" name="submitT" onclick="getteacher();" class="submit"   >      
+                    <input type="submit" id="submitT" name="submitT" onclick="getAdminData();" class="submit"   >      
                     </div>  
                 </form>
 
@@ -90,8 +90,60 @@
             studentbtn.classList.toggle("active");   
             teacherbtn.classList.toggle("active");          
         }  
+
+
+        function getStudentData()
+        {
+        var emailS=document.getElementById('emailS').value;
+        var passwordS=document.getElementById('passwordS').value;
+
+        $.ajax({
+            type:"POST",
+            url:"../ajax/getStudentData.php",
+            data: {emailS:emailS,passwordS:passwordS},
+            success: function(data){
+                if(data==0)
+                alert('logged in');
+                    // window.location.href="./home.php";
+
+                else if (data==1)
+                    alert ("incorrect  password ");
+                else
+
+                    alert (data);
+
+                }
+            });
+        }
+
+
+        function getAdminData()
+        {
+        var emailS=document.getElementById('emailS').value;
+        var passwordS=document.getElementById('passwordS').value;
+
+        $.ajax({
+            type:"POST",
+            url:"../ajax/getAdminData.php",
+            data: {emailS:emailS,passwordS:passwordS},
+            success: function(data){
+                if(data==0)
+                alert('logged in');
+                    // window.location.href="./home.php";
+
+                else if (data==1)
+                    alert ("incorrect  password ");
+                else
+
+                    alert (data);
+
+                }
+            });
+        }
         
     </script>
+
+    
 
     <script type="text/javascript">
         $('form').submit(function(e) {
