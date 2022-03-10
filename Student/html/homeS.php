@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../bootstrap/normalize.min.css">
+    <link rel="stylesheet" href="../../common/side_nav.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Banasthali Portal</title>
     <title>Document</title>
 </head>
 <body>
-    home of student
+    <?php include('../../common/navbar.php'); ?>
+    <section>
+        <?php include('../../common/sidebar.php'); ?>
+    </section>
 </body>
+
+<script src="../../common/home.js"></script>
 </html>

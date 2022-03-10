@@ -1,4 +1,4 @@
-<section>
+<div>
     <div class="sidebar" id="sidebar">
         <ul>
             <li >
@@ -50,14 +50,14 @@
                 </a>
                 <span class="tooltip">Contact Us</span>
             </li>
-            <!-- <li class="logout">
+            <li class="logout">
                 <a href="#">
                     <i class="bx bx-log-out"></i>
                     <span>Log Out</span>  
                 </a>
                 <span class="tooltip">Log Out</span>
-            </li> -->
+            </li>
         </ul>
     </div>
     <div class="overlay" id="overlay"></div>
-</section>
+</div>

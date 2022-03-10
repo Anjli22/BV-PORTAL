@@ -155,11 +155,7 @@
 .sidebar.open li .tooltip{
     display: none;
 }
-  
-.main{
-    margin-top: 75px;
-    margin-left: 72px;
-}
+
 @media screen and (max-width: 385px) {
     .navbar{
         font-size: 1.2em;
@@ -174,17 +170,30 @@
     .image{
         display: none;
     }
+
+    .sidebar{
+        margin-left: -100px !important;
+    }
     .sidebar.open{
         width: 100vw !important;
         position: relative;
+        margin-left: 0 !important;
         
+
     }
+    .navbar span{
+        font-size: 1.5em;
+
+    }
+    
     
     .sidebar.open .super-main{
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+
     
 }
 @media screen and (max-width: 950px ) {
