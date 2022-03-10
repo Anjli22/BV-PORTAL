@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +16,14 @@
 </head>
 <body>
     <?php include('../../common/navbar.php'); ?>
-    <section>
+    <div>
         <?php include('../../common/sidebar.php'); ?>
-    </section>
+
+        <div class="content-div">
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quo excepturi veritatis similique ipsum! Accusamus, nihil ea mollitia voluptate sed eos neque hic sequi? Ipsam earum accusamus saepe facilis quaerat?</p> -->
+        </div>
+    </ddi>
+
 </body>
 
 <script src="../../common/home.js"></script>

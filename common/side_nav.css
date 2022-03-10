@@ -21,6 +21,8 @@
     font-size: 1.3em;
     font-family: serif;
     position: fixed;
+    z-index: 2;
+    box-shadow: 0px 4px 5px grey;
 }
 .logout-btn{
     cursor: pointer;
@@ -69,7 +71,7 @@
     text-align: center;
     transition: width 0.7s ease;
     overflow-x: hidden;
-    z-index: 2;
+    z-index: 3;
 
 }
 .sidebar ul{
@@ -117,10 +119,11 @@
     left: 72px;
     width: 100vw;
     height: calc(100vh - 75px);
-    background-color: rgba(0, 0, 0, 0.419);
+    /* background-color: rgba(0, 0, 0, 0.419); */
     backdrop-filter: blur(2px);
     opacity: 0;
     visibility: hidden;
+    z-index: 2;
 }
 .overlay.overlay-blur{
     opacity: 1;
@@ -154,6 +157,12 @@
 }
 .sidebar.open li .tooltip{
     display: none;
+}
+
+.content-div{
+    position: relative;
+    top: 75px;
+    margin-left: 72px;
 }
 
 @media screen and (max-width: 385px) {
@@ -193,6 +202,9 @@
         align-items: center;
     }
 
+    .content-div{
+        margin-left:0;
+    }
 
     
 }
