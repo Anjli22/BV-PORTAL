@@ -19,7 +19,7 @@
 
             <li>
                 
-                <a href="#">
+                <a href="./gatepassform.php">
                     <i class="bx bx-home-smile"></i>
                     <span> Gate Pass</span>  
                 </a>
