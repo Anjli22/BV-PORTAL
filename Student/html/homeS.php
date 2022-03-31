@@ -22,7 +22,7 @@
         <div class="content-div">
             <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quo excepturi veritatis similique ipsum! Accusamus, nihil ea mollitia voluptate sed eos neque hic sequi? Ipsam earum accusamus saepe facilis quaerat?</p> -->
         </div>
-    </ddi>
+    </div>
 
 </body>
 

@@ -22,6 +22,10 @@
             <div class="toggle-btn">
                 <button id="teacher-btn" onclick="showteacher();">Admin</button>
             </div>
+<!-- 
+            <div class="toggle-btn">
+                <button id="parent-btn" onclick="showparent();">Parent</button>
+            </div> -->
                
         </div>
         <div class="log-form">
@@ -60,8 +64,25 @@
                 </form>
 
             </div>
+<!-- parent form -->
 
+            <div class="form" id="parent-form" style="display:none;">
+                <form>  
+                    <div>
+                    <div style="text-align:center; font-weight:bold; ">'Parent Panel'</div>
+                        <label>EMAIL: <span style="color:red">*</span></label><br>
+                        <input type="email" id="emailP" name="emailP" placeholder="Enter your email" class="form-control" required>
+                    </div>  
+                    <div>
+                        <label >PASSWORD: <span style="color:red">*</span></label><br>
+                        <input type="password" id="passwordP" name="passwordP" placeholder="Enter password" class="form-control" required>           
+                    </div>
+                    <div class="btn2">
+                    <input type="submit" id="submitP" name="submitP" onclick="getParentData();" class="submit"   >      
+                    </div>  
+                </form>
 
+            </div>
 
         </div>
 
@@ -73,8 +94,12 @@
         
         var studentform=document.getElementById('student-form');
         var teacherform=document.getElementById('teacher-form');
+        var parentform=document.getElementById('parent-form');
         var studentbtn = document.getElementById('student-btn');
         var teacherbtn = document.getElementById('teacher-btn');
+        var parentbtn = document.getElementById('parent-btn');
+
+        
 
         function showstudent()
         {
@@ -84,6 +109,15 @@
             teacherbtn.classList.toggle("active");       
         }   
         function showteacher()
+        {
+            studentform.style.display = "none";
+            teacherform.style.display = "block";
+            studentbtn.classList.toggle("active");   
+            teacherbtn.classList.toggle("active");          
+        }  
+
+
+        function showparent()
         {
             studentform.style.display = "none";
             teacherform.style.display = "block";
@@ -128,6 +162,30 @@
             success: function(data){
                 if(data==0)
                     window.location.href="./../../Admin/html/homeA.php";
+
+                else if (data==1)
+                    alert ("Incorrect Password ");
+                else
+
+                    console.log(data);
+
+                }
+            });
+        }
+        
+
+        function getParentData()
+        {
+        var emailP=document.getElementById('emailP').value;
+        var passwordP=document.getElementById('passwordP').value;
+
+        $.ajax({
+            type:"POST",
+            url:"./../../Admin/ajax/getParent.php",
+            data: {emailP:emailP,passwordP:passwordP},
+            success: function(data){
+                if(data==0)
+                    window.location.href="./../../Admin/html/homeP.php";
 
                 else if (data==1)
                     alert ("Incorrect Password ");

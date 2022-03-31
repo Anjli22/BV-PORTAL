@@ -15,8 +15,6 @@
     padding: 20px 30px ;
     font-size: 1.3em ;
     cursor: pointer ;
-
-
 }
 
 #personal_info{
@@ -73,5 +71,6 @@ td{
     }
     table{
         font-size: 1em;
+        width: 90%;
     }
 }

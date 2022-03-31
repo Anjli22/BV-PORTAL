@@ -17,14 +17,37 @@
 <body>
     <?php include('../../common/navbar.php'); ?>
     <div>
-        <?php include('../../common/sidebarA.php'); ?>
+        <?php include('../../common/sidebar.php'); ?>
 
         <div class="content-div">
-
+            <div id="singleBlog">
+            </div>
+  
         </div>
     </div>
 
 </body>
+
+<script type="text/javascript">
+    view();
+      function view(){
+          var blogId= <?php echo $_GET['bid'];?>;
+          $.ajax(
+                  {
+                  type:"POST",
+                  url:"../ajax/getSingleBlog.php",
+                  data:{bid:blogId},
+                  success:function(data)
+                  {
+                      $('#singleBlog').html(data);
+                      //  console.log(data);
+                      
+                  }
+              });
+      }
+  
+  
+</script>
 
 <script src="../../common/home.js"></script>
 </html>

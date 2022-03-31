@@ -1,0 +1,102 @@
+.body{
+    margin-top: 122px ;
+    min-height: 500px;
+    
+}
+.heading-exp{
+    margin-bottom: 30px ;
+    font-weight: bold;
+    text-align: center;
+    font-size: 31px;
+    color: #0e547c;
+
+}
+.search-icon{
+    font-size: 1.5em;
+}
+.srch{
+    padding:0px 16px ;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 26px;
+    
+}
+.search{
+    display:flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-bottom: 20px ;
+}
+.search-box{
+    padding: 5px 0px 5px 10px ;
+    font-size: 1.2em;
+    border: none;
+    
+
+}
+.search-box textarea:focus, input:focus{
+    outline: none;
+}
+.search-box:active{
+    border: none;
+}
+.edit-icon{
+    font-size: 2em;
+    cursor: pointer;
+}
+.edit-icon a{
+    color: grey ;
+}
+
+.edit-icon:hover .edit-hover {
+    opacity: 1;
+    transform: translate(35px, -55px);
+    transition: all 0.8s;
+
+}
+
+.edit-hover {
+    position: absolute;
+    background-color: rgb(9 65 97 / 10%);
+    color: rgb(9 65 97);
+    padding: 5px 15px ;
+    transform: translate(25px, -45px);
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+}
+.main{
+    /* background-color: rgb(191, 217, 240); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+}
+.experience-block{
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    margin: 1.5% 0px ;
+    box-shadow: 1px 1px 10px 0px rgb(148, 147, 147) , -1px -1px 10px 0px rgb(148, 147, 147) ;
+
+}
+.blog-title {
+    padding: 0px 1%;
+    padding-top: 1.5%;
+}
+
+.blog-content{
+    /* text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden; 
+    white-space: nowrap; */
+    /* background-color: rgb(226, 124, 218); */
+    text-align: left ;
+    color: gray;
+    min-height: 60px;
+    padding: 1% ;
+}
+.blog-content a{
+    color:rgb(33, 103, 160);
+    font-size:1.1em;
+}

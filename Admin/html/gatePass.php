@@ -20,7 +20,7 @@
         <?php include('../../common/sidebarA.php'); ?>
 
         <div class="content-div">
-
+            gate pass
         </div>
     </div>
 

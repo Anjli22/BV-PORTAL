@@ -17,7 +17,7 @@
 <body>
     <?php include('../../common/navbar.php'); ?>
     <div>
-        <?php include('../../common/sidebarA.php'); ?>
+        <?php include('../../common/sidebarP.php'); ?>
 
         <div class="content-div">
 

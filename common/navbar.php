@@ -2,7 +2,7 @@
     <div class="navbar">
         <div style="font-size: 1.2em;" id="ham-burger" onclick="show_option();"><i class="bx bx-menu hamburger" ></i> </div>
         <div class="logo">
-            <img class="image" src="../asset/banasthali_logo.gif" style="width:45px; height:45px; border-radius: 50%; margin-right:10px !important ; box-shadow: 3px 5px 5px #23497b, 4px 6px 5px #23497b; " alt="">
+            <img class="image" src="../../common/asset/banasthali_logo.gif" style="width:45px; height:45px; border-radius: 50%; margin-right:10px !important ; box-shadow: 3px 5px 5px #23497b, 4px 6px 5px #23497b; " alt="">
             <span> Banasthali Vidhyapith</span>
             
         </div>
