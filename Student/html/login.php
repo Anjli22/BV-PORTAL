@@ -64,40 +64,18 @@
                 </form>
 
             </div>
-<!-- parent form -->
 
-            <div class="form" id="parent-form" style="display:none;">
-                <form>  
-                    <div>
-                    <div style="text-align:center; font-weight:bold; ">'Parent Panel'</div>
-                        <label>EMAIL: <span style="color:red">*</span></label><br>
-                        <input type="email" id="emailP" name="emailP" placeholder="Enter your email" class="form-control" required>
-                    </div>  
-                    <div>
-                        <label >PASSWORD: <span style="color:red">*</span></label><br>
-                        <input type="password" id="passwordP" name="passwordP" placeholder="Enter password" class="form-control" required>           
-                    </div>
-                    <div class="btn2">
-                    <input type="submit" id="submitP" name="submitP" onclick="getParentData();" class="submit"   >      
-                    </div>  
-                </form>
-
-            </div>
-
-        </div>
 
             
-    </div>
 </body>
 
-    <script type="text/javascript">
+    <script type="text/javascript">  
         
         var studentform=document.getElementById('student-form');
         var teacherform=document.getElementById('teacher-form');
-        var parentform=document.getElementById('parent-form');
         var studentbtn = document.getElementById('student-btn');
         var teacherbtn = document.getElementById('teacher-btn');
-        var parentbtn = document.getElementById('parent-btn');
+        
 
         
 
@@ -114,16 +92,7 @@
             teacherform.style.display = "block";
             studentbtn.classList.toggle("active");   
             teacherbtn.classList.toggle("active");          
-        }  
-
-
-        function showparent()
-        {
-            studentform.style.display = "none";
-            teacherform.style.display = "block";
-            studentbtn.classList.toggle("active");   
-            teacherbtn.classList.toggle("active");          
-        }  
+        }    
 
 
         function getStudentData()

@@ -2,7 +2,7 @@
     <div class="sidebar" id="sidebar">
         <ul>
             <li >
-                <a href="#">
+                <a href="./homeS.php">
                     <i class='bx bx-home' type="solid"></i>
                     <span>Home</span>  
                 </a>
@@ -30,7 +30,7 @@
             </li>
             <li>
                 
-                <a href="#">
+                <a href="./gatepassMain.php">
                     <i class="bx bx-home-smile"></i>
                     <span> Gate Pass</span>  
                 </a>

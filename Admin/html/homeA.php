@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    if($_SESSION['id'] == "") 
+    {
+        header("Location:../../Student/html/index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

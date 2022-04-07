@@ -2,7 +2,7 @@
     <div class="sidebar" id="sidebar">
         <ul>
             <li >
-                <a href="#">
+                <a href="./homeP.php">
                     <i class='bx bx-home' type="solid"></i>
                     <span>Home</span>  
                 </a>
@@ -19,7 +19,7 @@
 
             <li>
                 
-                <a href="./gatepassform.php">
+                <a href="./gatePass.php">
                     <i class="bx bx-home-smile"></i>
                     <span> Gate Pass</span>  
                 </a>
@@ -27,7 +27,7 @@
             </li>
             
             <li class="logout">
-                <a href="../Student/html/index.php">
+                <a href="../../Student/ajax/logout.php">
                     <i class="bx bx-log-out"></i>
                     <!-- <span><a style="margin: 0px !important;"href= "../ajax/logout.php"></a></span> -->
 

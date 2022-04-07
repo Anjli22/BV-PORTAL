@@ -1,0 +1,40 @@
+.option{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap:2%;  
+
+}
+
+.common{
+    width: 80%;
+    height: 100px;
+    background-color:white;
+    margin-top: 7%;
+    box-shadow: 1px -1px 9px 1px grey;
+    border-radius: 10px 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.common a{
+  text-decoration: none;
+}
+.common:hover{
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+@media screen and (min-width: 768px)
+{
+    .option{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .common{
+      width: 15%;
+      height: 150px;
+      gap:2%;
+    }
+}

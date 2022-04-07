@@ -22,77 +22,67 @@
 <body>
     <?php include('../../common/navbar.php'); ?>
     <div>
-        <?php include('../../common/sidebarA.php'); ?>
+        <?php include('../../common/sidebarP.php'); ?>
 
         <div class="content-div">
             <div class="heading"><h2>Gate Pass Requests</h2></div>
-            <div id="main" class="main"></div>
-                
+            <div class="main" id="main"></div> 
         </div>
-        
     </div>
 
 </body>
-<script>
 
-$.ajax({
+<script src="../../common/home.js"></script>
+
+<script>
+    getGP();
+    function getGP (){
+       
+        $.ajax({
             type:"POST",
-            url:"../ajax/getgatepass.php",          
-            success: function(data){
+            url:"../ajax/getGatePassP.php",
+            success: function(data){  
                 $('#main').html(data);
-                
-                }
-            });
-        
-        
+                //console.log(data);
+
+            }
+        });    
+    }    
 </script>
+
 <script type="text/javascript">
 
     function accept(){
-        var accept = document.getElementById ('accept').value;
-        var gid= document.getElementById ('gid').innerText; 
-
-        console.log(gid);
+        var accept = document.getElementById ('accept').value;  
+        
         $.ajax(
             { 
             type:"POST",
-            url:"../ajax/statusGatePassA.php",
-            data:{status:accept,gid:gid},
+            url:"../ajax/statusByparentGatepass.php",
+            data:{status:accept},
             success:function(data)
             {    
-                if(data == 0)
-                {
-                    alert("Response have been recorded");   
-                    location.reload();
-
-                }
-                else 
-                {
-                    alert(data);
-                }
-
-                
+                alert(data);   
             }
         });
 
     }
 
-     function decline(){
+    function decline(){
         var decline = document.getElementById ('decline').value;    
-        console.log(decline);
-         $.ajax(
-             { 
-             type:"POST",
-             url:"../ajax/statusGatePassA.php",
-             data:{status:decline},
-             success:function(data)
-             {    
-                 alert(data);   
-             }
-         });
-     } 
+    
+        $.ajax(
+            { 
+            type:"POST",
+            url:"../ajax/statusByparentGatepass.php",
+            data:{status:decline},
+            success:function(data)
+            {    
+                alert(data);   
+            }
+        });
+    }
     
 
 </script>
-<script src="../../common/home.js"></script>
 </html>
