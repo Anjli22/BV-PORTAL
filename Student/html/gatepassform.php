@@ -30,14 +30,14 @@
 
             <form id="form" >
 
-                <div>
+                <!-- <div>
                     <label>ID NO<span>*</span>:</label> <br/>
                     <input type="text" name="sid" id="sid" placeholder="e.g. BTBTE1" required>
                 </div>
                 <div>
                     <label>STUDENT NAME<span>*</span>:</label> <br/>
                     <input type="text" name="sname" id="sname"  required>
-                </div>
+                </div> -->
                 <div>
                     <label>CLASS<span>*</span>:</label><br/>
                     <input  type="text" name="class" id="class" required placeholder="e.g. ELECTRONICS AND COMMUNICATION" required>
@@ -95,16 +95,24 @@
                 data:data,
                 success:function(data)
                 {
-                     
-                    alert(data);
-                    
-                }
+                    if(data == 0)
+                    {
+                        alert("Request Successfully Submitted");
+                        window.location.href="./gatepassMain.php";
+
+                    }
+                    else{
+                        alert(data);   
+                    }
+                }  
             });
 
         }
       
 
 </script>
+
+
 <script type="text/javascript">
     $('form').submit(function(e) {
         e.preventDefault();

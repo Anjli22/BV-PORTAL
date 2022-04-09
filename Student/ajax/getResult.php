@@ -6,7 +6,6 @@
     $query = $db->prepare('SELECT * from courses_of_ece,result WHERE courses_of_ece.course_code=result.course_code AND result.sid=? AND courses_of_ece.semester =?');
     $data=array($id,$option);
     $query->execute($data);
-    // $row=$query->fetch();
     if($datarow=$query->fetch()>0){
     
 ?>

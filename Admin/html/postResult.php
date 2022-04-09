@@ -15,6 +15,7 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/post.css">
     <title>Banasthali Portal</title>
     <title>Document</title>
 </head>
@@ -24,8 +25,8 @@
         <?php include('../../common/sidebarA.php'); ?>
 
         <div class="content-div">
-
-            <div>Select Subject</div>
+          <div class="main">
+                    <div>Select Subject</div>
 
             <div style="margin:20px; !important"></div>
                 <form id="excel_form">
@@ -37,11 +38,13 @@
                     </div>
                     
                     <div>
-                    <input type="submit" name="submit" onclick="send();" > 
+                    <input type="submit"class="btn" name="submit" onclick="send();"  > 
                     </div>
                 </form>
             </div>
-        </div>
+</div>
+          </div>
+           
     </div>
 
 </body>

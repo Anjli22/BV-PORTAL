@@ -39,7 +39,7 @@
                         <input type="password" id="passwordP" name="passwordP" placeholder="Enter password" class="form-control" required>           
                     </div>
                     <div class="btn2">
-                    <input type="submit" id="submitP" name="submitP" onclick="getParentData();" class="submit"   >      
+                    <input type="submit" id="submitP" name="submitP" onclick="getParentData();" class="submit" value="login" >      
                     </div>  
                 </form>
 
@@ -52,9 +52,6 @@
 </body>
 
     <script type="text/javascript">
- 
-        // var parentform=document.getElementById('parent-form');
-        // var parentbtn = document.getElementById('parent-btn');
         
         function getParentData()
         {
@@ -73,7 +70,7 @@
                         alert ("Incorrect Password ");
                     else
 
-                        console.log(data);
+                        alert(data);
 
                 }
             });

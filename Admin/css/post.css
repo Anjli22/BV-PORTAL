@@ -1,0 +1,35 @@
+.content-div{
+    display: flex;
+    justify-content: center;
+    float: column;
+    align-items: center;
+}
+body{
+    background-color: aliceblue;
+}
+.main{
+   margin-top:13%;
+   font-size: 1.4em;
+   background-color: #ffffffdb;
+   padding: 4%;
+   box-shadow: -1px -1px 8px 0px grey;
+  
+}
+#courses{
+    padding: 3% 0%;
+    margin-bottom: 14%;
+}
+.btn{
+    padding: 2% 42%;
+    margin-top: 11%;
+    background-color: #6cace4;
+    color: white;
+    font-size: 0.8em;
+}
+.btn:hover{
+    background-color: gray;
+    cursor: pointer;
+    box-shadow: -1px 1px 8px 1px grey;
+    color: white;
+    font-size: 0.8em;
+}

@@ -40,7 +40,7 @@ $.ajax({
             url:"../ajax/getgatepass.php",          
             success: function(data){
                 $('#main').html(data);
-                
+                // location.reload();
                 }
             });
         
@@ -79,15 +79,27 @@ $.ajax({
 
      function decline(){
         var decline = document.getElementById ('decline').value;    
+        var gid= document.getElementById ('gid').innerText; 
         console.log(decline);
          $.ajax(
              { 
              type:"POST",
              url:"../ajax/statusGatePassA.php",
-             data:{status:decline},
+             data:{status:decline,gid:gid},
              success:function(data)
              {    
-                 alert(data);   
+                if(data == 0)
+                {
+                    alert("Response have been recorded");   
+                    location.reload();
+
+                }
+                else 
+                {
+                    alert(data);
+                }
+
+                
              }
          });
      } 

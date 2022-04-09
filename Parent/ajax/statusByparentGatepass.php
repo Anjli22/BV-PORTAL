@@ -18,14 +18,13 @@
     
     //to get gate pass request card
 
-    $query1 = $db->prepare('UPDATE `gatepassinfo` SET `sstatus`=? WHERE ssid =?'); 
-    $data1=array($status, $sid); 
+    $query = $db->prepare('UPDATE `gatepassinfo` SET `sstatus`=? WHERE ssid =?'); 
+    $data=array($status, $sid); 
     $execute=$query->execute($data);
 
     if($execute)
     {
-        echo "Response have been recorded";
-        header("Refresh:0");
+        echo 0;
 
     }
     

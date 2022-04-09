@@ -1,7 +1,8 @@
 <?php
+session_start();
  include('connection.php');
- $sid = $_POST['sid'];
- $sname = $_POST['sname'];
+ $sid = $_SESSION['id'];
+ $sname = $_SESSION['user'];
  $class = $_POST['class'];
  $pname = $_POST['pname'];
  $reason = $_POST['reason'];
@@ -16,7 +17,7 @@
 
     $execute =$query -> execute($data);
     if($execute) 
-    echo 'Request Successfully Submitted';
+    echo 0;
     else
     echo 'something went wrong';
 }

@@ -37,6 +37,43 @@
     </div>
 
 </body>
+<script type="text/javascript">
+
+function getdelete() {
+    var result = confirm("Want to delete?");
+    if (result) {
+        getdelete1();
+    }
+}
+ 
+function getdelete1(){
+
+    var gp=document.getElementById('gp').innerText;
+    console.log(gp);
+
+    $.ajax(
+        {
+            
+        type:"POST",
+        url:"../ajax/deleteGatePass.php",
+        data:{gp:gp},
+        success:function(data)
+        {
+            if (data==0) 
+            {
+                alert("Gate pass deleted");
+                window.location.href="./gatepassMain.php";
+            }
+                
+            else{
+                alert(data);
+            }
+        }  
+    });
+
+}
+
+</script>
 <script>
      var id= <?php echo json_encode($_SESSION['id']); ?>;
     getGatePass();
@@ -47,8 +84,7 @@
             data: {id:id},
             success: function(data){
                     $('#main').html(data);
-                console.log(data);
-                    
+                
 
             }
         });

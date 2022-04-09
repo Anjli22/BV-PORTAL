@@ -1,17 +1,17 @@
 <?php
     
+    session_start();
     include('connection.php');
-
+     
     if(isset($_POST['content']))
     {
 
-
-      $content=$_POST['content'];
-      $ssid = $_POST['sid'];
-      $sname =$_POST['sname'];
+      $ssid = $_SESSION['id'];
+      $sname =$_SESSION['user'];
       $title =$_POST['title'];
+      $content=$_POST['content'];
       
-      if($ssid == "" || $sname == "" || $title == "" ) 
+      if($title == "" ) 
       {
          echo "Please Fill all the Fields";
       }
@@ -23,7 +23,8 @@
    
          if($execute)
          {
-            echo "Data Inserted Successfully";
+            echo 0;
+            
          }
             
          else

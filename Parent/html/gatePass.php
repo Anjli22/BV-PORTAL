@@ -37,13 +37,16 @@
 <script>
     getGP();
     function getGP (){
-       
+        var pid= <?php echo json_encode($_SESSION['id']); ?>;
         $.ajax({
             type:"POST",
             url:"../ajax/getGatePassP.php",
-            success: function(data){  
+            data: {pid:pid},
+            success: function(data){ 
+                 
                 $('#main').html(data);
-                //console.log(data);
+                
+                // console.log(data);
 
             }
         });    
@@ -61,8 +64,16 @@
             url:"../ajax/statusByparentGatepass.php",
             data:{status:accept},
             success:function(data)
-            {    
-                alert(data);   
+            {   
+                if(data == 0)
+                {
+                    alert("Response have been recorded");
+                    location.reload();
+                }
+                else{
+                    alert(data);   
+                } 
+                
             }
         });
 
@@ -78,7 +89,14 @@
             data:{status:decline},
             success:function(data)
             {    
-                alert(data);   
+                if(data == 0)
+                {
+                    alert("Response have been recorded");
+                    location.reload();
+                }
+                else{
+                    alert(data);   
+                } 
             }
         });
     }

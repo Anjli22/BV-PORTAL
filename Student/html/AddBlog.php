@@ -28,10 +28,6 @@
         <div class="content-div">
             <div class="form">
                     <form id="form">
-                        <div><label>ID:</label></div>
-                        <input type="text" id="sid" name="sid" placeholder="Enter your ID"  required /><br/>
-                        <div><label>Name:</label></div>
-                        <input type="text" id="sname" name="sname" placeholder="Enter your name"  required /><br/>
                         <div><label>Title:</label></div>
                         <input type="text" id="title" name="title" placeholder="Enter the Title" required /><br/>
                         <div><label >Content:</label></div>
@@ -58,32 +54,30 @@
 
         
         function input(){
-            
             var form=document.getElementById('form');
             var data=new FormData(form); //object
-            
-            var content = document.getElementById('content').value;
-            console.log(content);
-            if(content != "") {
-                $.ajax(
-                {
+          
+            $.ajax(
+            {
                 type:"POST",
                 url:"../ajax/insertBlog.php",
                 contentType:false,
                 processData:false,
                 data:data,
                 success:function(data)
-                {                    
-                    alert(data);
-                    window.location.href="./experienceSection.php";
+                {     
+                    if(data == 0)     
+                    {
+                        alert("Data Inserted Successfully");
+                        window.location.href="./experienceSection.php";
+                    }      
+                    else 
+                    {
+                        alert(data);
+                    }    
+                    
                 }
             });
-            }
-            else 
-            {
-                alert("Please Fill all the Fields");
-                
-            }
             
 
         }

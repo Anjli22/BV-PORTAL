@@ -41,7 +41,7 @@
                         <input type="password" id="passwordS" name="passwordS" placeholder="Enter password" class="form-control" required>           
                     </div>
                     <div class="btn2">
-                    <input type="submit" id="submitS" name="submitS" onclick="getStudentData();" class="submit"   >      
+                    <input type="submit" id="submitS" name="submitS" onclick="getStudentData();" class="submit" value="Login"  >      
                     </div>  
                 </form>
 
@@ -59,7 +59,7 @@
                         <input type="password" id="passwordA" name="passwordA" placeholder="Enter password" class="form-control" required>           
                     </div>
                     <div class="btn2">
-                    <input type="submit" id="submitA" name="submitA" onclick="getAdminData();" class="submit"   >      
+                    <input type="submit" id="submitA" name="submitA" onclick="getAdminData();" class="submit"  value="Login" >      
                     </div>  
                 </form>
 
@@ -91,7 +91,7 @@
             studentform.style.display = "none";
             teacherform.style.display = "block";
             studentbtn.classList.toggle("active");   
-            teacherbtn.classList.toggle("active");          
+            teacherbtn.classList.toggle("active");         
         }    
 
 
@@ -106,13 +106,12 @@
             data: {emailS:emailS,passwordS:passwordS},
             success: function(data){
                 if(data==0)
-                
                     window.location.href="./homeS.php";
 
                 else if (data==1)
-                    alert ("incorrect  password ");
+                    alert ("incorrect  password");
                 else
-                    console.log(data);
+                    alert(data);
 
                 }
             });
@@ -136,7 +135,7 @@
                     alert ("Incorrect Password ");
                 else
 
-                    console.log(data);
+                    alert(data);
 
                 }
             });
