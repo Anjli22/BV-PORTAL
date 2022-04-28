@@ -17,18 +17,18 @@
     font-family: serif;
     background-color: #cee7d7;
     width: 90%;
+    /* padding-bottom: 5vh; */
+
 }
 table{
-    background-color: #cee7d7;
-    margin-bottom : 13%;
+    width: 100%;
 }
 td{
    padding: 2% 3%;
-   width: 50%;
+   width: 50% !important;
    
 }
 tr{
-    width: 100%;
     gap:4px;
     display: flex;
     align-items: flex-start;
@@ -64,10 +64,18 @@ tr{
 .decline-btn:hover{
     background-color: rgb(215 9 9);
 }
+.delete-btn{
+    font-size: 1.5em;
+
+}
+.delete-btn:hover{
+    color: red;
+    transition: all 0.5s ;
+}
 
 @media screen and (min-width: 756px ) {
     
     .main{
-        width: fit-content !important;
+        width: 60%;
     }
 } 

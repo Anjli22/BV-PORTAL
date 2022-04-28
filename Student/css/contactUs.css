@@ -1,23 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Recursive:wght@300;400;500;600;700;800&display=swap');
+
 *{
     margin:0px;
     padding:0px;
 }
 .heading{
+    font-family: Recursive;
     text-align: center;
     margin: 7vh 0;
 }
-table ,td,th{
-    border: 2px solid black;
+.main{
+    background-image: url(../../common/asset/contact.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 table{
+    background-color: #ffffff87;
     border-collapse: collapse;
     width: 90%;
     margin-bottom: 5vh;
 }
+th{
+    margin-bottom: 2%;
+}
 th,td{
+    font-family: Lato;
     overflow-wrap: anywhere;
     width: 33%;
     padding: 1vh;
+    text-align: left !important;
+    padding: 1.5% 2.5%;
 }
 .main{
     display: flex;
@@ -30,6 +43,6 @@ th,td{
 @media screen and (min-width: 425px)
 {
     table{
-        width:70%
+        width:70%;
     }
 }

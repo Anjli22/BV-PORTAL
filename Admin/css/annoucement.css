@@ -1,0 +1,45 @@
+body{
+    /* background-color: azure; */
+    background-image: url('https://www.pexels.com/photo/sunset-over-snow-covered-mountains-66997/');
+    background-size: cover;
+}
+
+
+.content{
+    width: 50%;
+    
+    margin-top: 20%;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form1{
+    width: 50%;
+    margin-top: 8%;
+}
+h2{
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+h2 span{
+    color:#a21414;
+}
+.submit-btn{
+    text-align: center;
+    margin-top: 3%;
+}
+.submit{
+    padding: 1% 7%;
+    background-color: #d6c6e7;
+    border-radius: 5px;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: #9156d0;
+    color: white;
+    box-shadow: -1px 0px 8px 1px #95857c;
+
+}

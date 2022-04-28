@@ -1,10 +1,9 @@
-<?php
-    
+<?php 
     session_start();
     include('connection.php');
      
-    if(isset($_POST['content']))
-    {
+   //  if(isset($_POST['content']))
+   //  {
 
       $ssid = $_SESSION['id'];
       $sname =$_SESSION['user'];
@@ -13,7 +12,7 @@
       
       if($title == "" ) 
       {
-         echo "Please Fill all the Fields";
+         echo "Please Fill the title";
       }
       else{
          $query = $db->prepare('INSERT INTO blog(ssid,sname,title,content) VALUES (?,?,?,?)');
@@ -30,7 +29,10 @@
          else
             echo "data not inserted";
       }
-   }
+   // }
+   // else{
+   //    echo "Please Fill all the Fields";
+   // }
 
 
 

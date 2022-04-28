@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Recursive:wght@300;400;500;600;700;800&display=swap');
+
 .content-div{
     display: flex;
     justify-content: center;
@@ -37,8 +39,8 @@ input:hover{
     padding: 1% 2%;
     background: #e8eaf6;
     box-shadow: -1px 0px 5px  rgb(75, 75, 73);
-    border-radius: 5px;
     width: 10%;
+    border-radius: 5px;
 }
 
 .submit:hover{

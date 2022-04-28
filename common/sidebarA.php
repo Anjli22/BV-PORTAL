@@ -8,6 +8,14 @@
                 </a>
                 <span class="tooltip">Home</span>
             </li>
+
+            <li>
+                <a href="./annoucement.php">
+                <i class='bx bx-message-rounded-dots' ></i>
+                <span>Announcement</span>  
+                </a>
+                <span class="tooltip">Announcement</span>
+            </li>
     
             <li>
                 <a href="./postResult.php">

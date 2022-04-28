@@ -76,21 +76,27 @@
         function send(){
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
-            
-            $.ajax(
-                {
-                type:"POST",
-                url:"../ajax/result_excel.php",
-                contentType:false,
-                processData:false,
-                data:data,
-                success:function(data)
-                {
-                    alert(data);
-                    // console.log(data);
-                    window.location.reload(1);
-                }
-            });
+            var excel_file = document.getElementById('excel_file').value;
+            if(excel_file != ""){
+                $.ajax(
+                    {
+                    type:"POST",
+                    url:"../ajax/result_excel.php",
+                    contentType:false,
+                    processData:false,
+                    data:data,
+                    success:function(data)
+                    {
+                        alert(data);
+                        // console.log(data);
+                        window.location.reload(1);
+                    }
+                });
+            }
+            else 
+            {
+                alert("Please attach the Excel");
+            }
 
         }
       

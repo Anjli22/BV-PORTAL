@@ -8,10 +8,9 @@
         </div>
         <div class="logout-btn" id="logout-btn" >
             <i class="bx bx-user" ></i>
-            <!-- <span class="user-log-out"> -->
-                <!-- <p>Profile</p>
-                <p>Log Out</p> -->
-            <!-- </span> -->
+            <span class="user-log-out">
+                <p><?php echo $_SESSION['user']; ?></p>
+            </span>
         </div>
     </div>
 </section>

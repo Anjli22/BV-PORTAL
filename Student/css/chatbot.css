@@ -1,0 +1,24 @@
+.chatbot{
+    position: fixed;
+    bottom: 10vh;
+    right: 10vh;
+
+}
+.chatbot img{
+    width:30%;
+    float: right;
+    cursor: pointer;
+} 
+
+@media screen and (max-width: 768px ) {
+    
+    .chatbot img{
+        width: 20%;
+    }
+
+    .chatbot{
+        bottom: 5vh;
+        right: 5vh;
+    }
+    
+} 

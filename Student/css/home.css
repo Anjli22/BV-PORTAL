@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Recursive:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+/* .head{
+    display: flex;
+    justify-content: space-between;
+} */
+.heading{
+    font-family: Lato;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
+    text-align: center;
+    font-family: Recursive;
+    font-size: 1.4em;
+}
+.main{
+
+    margin: 0 6%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5%;
+
+}
+.content{
+    background-color: #e7e7e7a1;
+    width: 300px;
+    margin-bottom: 2vh;
+    padding: 2%;
+    margin-bottom: 5%;
+    font-weight: 600;
+    box-shadow: -2px 3px 7px 0px #c8d3f4;
+    border-radius: 5px;
+}   
+
+.content:hover{
+    background-color: #f2f2f2a1;
+    box-shadow: -2px 3px 9px 3px #bccbf8;
+    transform : scale(1.1) ;
+    transition: all 0.3s ease-in-out;
+    
+}
+.title{
+    margin: 2vh 0;
+}
+
+.date{
+    font-weight: 500;
+    color: grey;
+    margin: 2vh 0;
+}
+.spot{
+    position: fixed;
+    top: 15vh;
+    left: 15vh;
+    width: 50px;
+    height: 50px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    gap: 1.6%;
+   
+}
+.feather{
+    width: 50px;
+    height: 50px;
+    margin-top: 0.9%;
+}
+
+.delete-btn{
+    color:grey;
+    cursor: pointer;
+}
+.delete-btn:hover{
+    color: black;
+}

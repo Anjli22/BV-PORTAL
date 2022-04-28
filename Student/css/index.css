@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Recursive:wght@300;400;500;600;700;800&display=swap');
+
 *{
     margin:0px;
     padding:0px;
@@ -19,44 +21,63 @@ body{
     margin: 0 5%;
 }
 .box{
-    width: 45%;
+    box-sizing: border-box;
+    width: 40%;
     min-height: 130px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.909);
     border-radius: 4%;
     box-shadow: 2px 5px 20px 1px #376299;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 2%;
 }
 .box a{
     text-decoration: none;
     font-size: 1.1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    position: relative;
 }
-/* .box a:hover{
-    box-shadow:2px 5px 20px 1px #091018;
-} */
+
+.box:hover{
+    box-shadow: 2px 5px 20px 8px #376bb0;
+    background-color: white;
+}
+
+#weather {
+    margin-top: 10vh;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 @media screen and (min-width: 425px ) {
     
 
     .title{
         font-size: 2em ;
     }
+} 
+@media screen and (max-width: 425px ) {
     
+
+    .box a{
+        font-size: 0.9em;
+    }
     
 } 
-
 @media screen and (min-width: 720px ) {
     
     .box{
-        width: 20%;
+        width: 250px;
     }
 
     .title{
         text-align: center;
         font-size:2.5em;
-        margin:15vh 0;
+        margin: 10vh 0;
     }
     
     
