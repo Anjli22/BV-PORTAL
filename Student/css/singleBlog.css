@@ -5,7 +5,7 @@
     padding: 0;
 }
 .main{
-    padding: 5% 10%;
+    padding: 3% 10%;
     /* background: #1c92d2; */
     background: -webkit-linear-gradient(to right, #f2fcfe, #93c4dfb7);
     /* background: linear-gradient(to right, #f2fcfe, #81b8d6b7); */
@@ -13,7 +13,7 @@
     background: url('https://img.freepik.com/free-vector/pastel-watercolor-painted-background_23-2148959638.jpg?t=st=1651134130~exp=1651134730~hmac=b6cd908…&w=996');
     background-size: cover;
     background-attachment: fixed;
-
+    word-break: break-word;
 }
 .like-btn{
     font-size: 2em;
@@ -51,6 +51,26 @@
 .details{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    margin-top: 7%;
+    margin-top: 4%;
     color:gray;
 }
+.back-btn{
+    margin-bottom: 5%;
+    font-size: 1.1em;
+    cursor: pointer;
+
+}
+
+.back-btn a
+{
+    text-decoration: none;
+}
+@media screen and (max-width: 425px) {
+    .blog-heading{
+         font-size: 0.8em;
+    }
+    .blog-content{
+       font-size: 0.9em;
+    }
+  }
+  

@@ -52,6 +52,8 @@ body{
     font-weight: 600;
     font-size: 1.2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 7%;
+    line-height: 1.5em;
 }
 @media screen and (min-width: 425px ) {
     

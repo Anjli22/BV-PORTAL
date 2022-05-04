@@ -24,6 +24,7 @@
     <div>
 
         <div class="content-div">
+           
             <div id="singleBlog">
             </div>
   

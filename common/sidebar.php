@@ -29,19 +29,18 @@
     
             </li>
             <li>
-                
-                <a href="./gatepassMain.php">
-                    <i class="bx bx-home-smile"></i>
-                    <span> Gate Pass</span>  
-                </a>
-                <span class="tooltip">Gate Pass</span>
-            </li>
-            <li>
                 <a href="./experienceSection.php">
                     <i class="bx bx-pencil"></i>
                     <span> Experience Section</span>  
                 </a>
                 <span class="tooltip">Experience Section</span>
+            </li>
+            <li>
+                <a href="./gatepassMain.php">
+                    <i class="bx bx-home-smile"></i>
+                    <span> Gate Pass</span>  
+                </a>
+                <span class="tooltip">Gate Pass</span>
             </li>
             <li>
                 <a href="./contactUs.php">

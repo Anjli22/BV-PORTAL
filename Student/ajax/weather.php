@@ -15,9 +15,9 @@
 
   $temperature_description = ucwords($weather_data['weather'][0]['description']);
 
-  $temperature_icon = $weather_data['weather'][0]['icon'];;
+  $temperature_icon =  $weather_data['weather'][0]['icon'];
 
-  echo "The current temperature is ".$temperature_in_celcuis." &deg;C. ". "<br>";
+  echo "The current temperature is ".$temperature_in_celcuis."&deg;C". "<br>";
   echo "Today is " . date("d.m.Y") . "<br>";
   echo $temperature_description. "<br>";
   

@@ -31,7 +31,7 @@
                 <div class="head">
                     <h2 class="heading">Spotlight</h2>
                     
-                    <img class= "spot" src="https://cdn-icons-png.flaticon.com/512/1100/1100338.png">
+                    
                 </div>
                 <div id="main" class="main"></div>
             </div>
@@ -44,27 +44,24 @@
         </a>
     </div>
 </body>
-<script type="text/javascript">
+
 
 
 <script src="../../common/home.js"></script>
 
-      <script type="text/javascript">
-        getExperiences();
-        function getExperiences()
-        {
-            
-            $.ajax({
-                type:"POST",
-                url:"../ajax/gethome.php",
-                data: {},
-                success: function(data){
-                    $('#main').html(data);
+<script type="text/javascript">
+      
+    $.ajax({
+        type:"POST",
+        url:"../ajax/gethome.php",
+        data: {},
+        success: function(data){
+            $('#main').html(data);
 
-                }
-            });
+        }
+    });
 
-       }
+
   
 </script>
 </html>

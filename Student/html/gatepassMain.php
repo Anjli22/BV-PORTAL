@@ -29,8 +29,22 @@
         <div class="content-div">
             <div class="main">
                 <div class="option">
-                    <div class="option1 common"><a href="./gatepassform.php">Gatepass-form</a></div>
-                    <div  class="option2 common"><a href="./gatepasstatus.php">Gatepass-status</a></div>
+                    <!-- <div class="option1 common"><a href="./gatepassform.php">Gatepass-form</a></div>
+                    <div  class="option2 common"><a href="./gatepasstatus.php">Gatepass-status</a></div> -->
+                    <div class="common">
+                        <a class="card" href="./gatepassform.php">
+                            <div class="sq sq1"></div>
+                            <div class="sq sq2"></div>
+                            <div class="title">Gatepass Form</div>
+                        </a>
+                    </div>
+                    <div class="common">
+                        <a class="card" href="./gatepasstatus.php">
+                            <div class="sq sq1"></div>
+                            <div class="sq sq2 cir"></div>
+                            <div class="title">Gatepass Status</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

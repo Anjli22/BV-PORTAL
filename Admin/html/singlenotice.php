@@ -45,8 +45,9 @@ function getdelete() {
 }
  
 function getdelete1(){
-
+   
     var aid=document.getElementById('aid').innerText;
+    console.log(aid);
 
     $.ajax(
         {
@@ -72,12 +73,12 @@ function getdelete1(){
 
 </script>
 <script type="text/javascript">
-      console.log("blogId");
+    //   console.log("blogId");
     view();
       function view(){
       
           var blogId= <?php echo $_GET['aid'];?>;
-          console.log(blogId);
+        //   console.log(blogId);
           $.ajax(
                   {
                   type:"POST",

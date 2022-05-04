@@ -1,5 +1,4 @@
-<?php
-    
+<?php  
     include('connection.php');
 
     $author =$_POST['author'];
@@ -14,8 +13,5 @@
         echo 0;
      else
         echo "data not inserted";
-
-
-
 
 ?>

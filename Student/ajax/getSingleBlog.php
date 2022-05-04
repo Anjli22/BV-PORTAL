@@ -10,6 +10,7 @@
    while($datarow=$query->fetch()){ ?>
 
     <div class="main">
+      <div class="back-btn"><a href="./experienceSection.php"><i class='bx bx-arrow-back' ></i> Back</a></div>
       <div class="blog-heading" ><h1><?php echo $datarow['title']?></h1></div>
       <div class="details">
        <div class="author"><p>-by <?php echo $datarow['sname']?></p></div>

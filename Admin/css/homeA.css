@@ -21,8 +21,21 @@
     gap: 5%;
 
 }
+.content:nth-child(4n-3){
+    background-color:  #ff5b5b57;   
+}
+.content:nth-child(4n-2){
+    background-color: #efef0e44;
+}
+.content:nth-child(4n-1){
+    background-color: #0eea9938;
+}
+.content:nth-child(4n-0){
+    background-color: #1b42ff1e;
+}
+
 .content{
-    background-color: #e7e7e7a1;
+    /* background-color: #e7e7e7a1; */
     width: 300px;
     margin-bottom: 2vh;
     padding: 2%;

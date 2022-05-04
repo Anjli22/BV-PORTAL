@@ -30,7 +30,7 @@
                 <div class="head">
                     <h2 class="heading">Spotlight</h2>
                     
-                    <img class= "spot" src="https://cdn-icons-png.flaticon.com/512/1100/1100338.png">
+                    
                 </div>
                 <div id="main" class="main"></div>
             </div>
@@ -75,8 +75,14 @@ function getdelete1(){
 
 </script>
 <script src="../../common/home.js"></script>
-
+   
       <script type="text/javascript">
+         
+          var body=document.getElementById('main').innerText;
+          
+          if(body=="") 
+          $('#main').html("*****No current Information");
+
         getExperiences();
         function getExperiences()
         {

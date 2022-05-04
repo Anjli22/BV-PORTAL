@@ -11,6 +11,7 @@
 
      ?>
     <div class="notice" >
+      <div style="display:none;" id="aid"><?php echo $datarow['aid']?></div>
       <p><?php echo $datarow['content']?></p>
       <p style="margin: 2% 0; color:grey;"><?php echo $datarow['date']?></p>
       <div class="delete-btn" onclick="getdelete1();"><i class='bx bxs-trash-alt' ></i></div>
